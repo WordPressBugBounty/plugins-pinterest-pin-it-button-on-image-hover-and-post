@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Weblizar Pin It Button On Image Hover And Post
- * Version: 4.3
+ * Version: 4.4
  * Description: Weblizar pin it button on image hover plugin provides facility to pins your blog posts, pages and images into your Pinterest account boards.
  * Author: Weblizar
  * Author URI: https://weblizar.com/plugins/

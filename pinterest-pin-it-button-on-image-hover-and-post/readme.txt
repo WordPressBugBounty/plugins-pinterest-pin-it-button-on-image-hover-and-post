@@ -5,8 +5,9 @@ Contributors: weblizar
 Donate link: https://www.weblizar.com/
 Tags: pinterest, pin images, pin photo, pin it button
 Requires at least: 7.4
-Tested up to: 6.6.2
-Stable tag: 4.3
+Tested up to: 6.7.2
+Tested on PHP up to: 8.3.3
+Stable tag: 4.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -53,18 +54,7 @@ Weblizar Pin it button on image hover plugin provides facility to pins your blog
 
 * **Multilingual & Translation Ready** - So that none of our user face difficulty in using our plugin.
 
-#### Check Pinterest Feed Pro Live In Action
 
-* [Pinterest Feed](http://demo.weblizar.com/pinterest-feed-pro/)
-* [Pinterest Profile](http://demo.weblizar.com/pinterest-feed-pro/profile/)
-* [Pinterest Pins](http://demo.weblizar.com/pinterest-feed-pro/pinterest-pins/)
-* [Pinterest Boards](http://demo.weblizar.com/pinterest-feed-pro/pinterest-board/)
-* [Pinterest Feed Pro Docs](https://weblizar.com/documentation/plugins/pinterest-feed-pro/)
-
-#### Check Admin Demo Before Buy
-* Login URL: [Pinterest Feed Pro](http://demo.weblizar.com/pinterest-feed-pro-admin-demo/wp-admin/)
-* Username: userdemo
-* Password: userdemo
 
 == Installation ==
 
@@ -109,6 +99,9 @@ Please use WordPress [support forum](http://wordpress.org/support/plugin/pintere
 == Changelog ==
 
 For more information, see [Weblizar](https://wwww.weblizar.com/).
+= Version 4.4 =[25-02-2025]
+- Tested With Wordpress 6.7.2
+- Tested With PHP 8.3.3
 
 = Version 4.3 =[15-10-2024]
 - Tested With Wordpress 6.6.2
