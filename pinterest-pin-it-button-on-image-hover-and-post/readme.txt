@@ -5,9 +5,9 @@ Contributors: weblizar
 Donate link: https://www.weblizar.com/
 Tags: pinterest, pin images, pin photo, pin it button
 Requires at least: 7.4
-Tested up to: 6.9
+Tested up to: 6.9.1
 Tested on PHP up to: 8.4
-Stable tag: 4.7
+Stable tag: 4.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -99,6 +99,10 @@ Please use WordPress [support forum](http://wordpress.org/support/plugin/pintere
 == Changelog ==
 
 For more information, see [Weblizar](https://wwww.weblizar.com/).
+
+= Version 4.8 =[23-02-2026]
+- Tested With Wordpress 6.9.1
+- Tested With PHP 8.5.1
 
 = Version 4.7 =[06-12-2025]
 - Tested With Wordpress 6.9
