@@ -1,19 +1,24 @@
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+?>
 <hr>
 <div>
-	<h3><?php esc_html_e( 'To Exclude the image(s) from Pin Button On Image Hover. Please add image(s) URL below:', WEBLIZAR_PINIT_TD ); ?>
+	<h3><?php esc_html_e( 'To Exclude the image(s) from Pin Button On Image Hover. Please add image(s) URL below:', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?>
 	</h3>
 	<br>
 	<div class="row">
 		<div class="col-md-6">
-			<input id="no-pin-image-url" name="no-pin-image-url" class="form-control" type="text" value="" placeholder="<?php esc_attr_e( 'Enter Image SRC URL', WEBLIZAR_PINIT_TD ); ?>">
+			<input id="no-pin-image-url" name="no-pin-image-url" class="form-control" type="text" value="" placeholder="<?php esc_attr_e( 'Enter Image SRC URL', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?>">
 		</div>
 		<div class="col-md-2">
 			<?php wp_nonce_field( 'pinit_exclude_nonce_action', 'pinit_exclude_nonce_field' ); ?>
-			<button id="add-pin-image-url" name="add-pin-image-url" class="btn btn-danger" type="button" onclick="return SaveNoPinImage(this.value);"><strong><?php esc_html_e( 'Add', WEBLIZAR_PINIT_TD ); ?></strong></button>
+			<button id="add-pin-image-url" name="add-pin-image-url" class="btn btn-danger" type="button" onclick="return SaveNoPinImage(this.value);"><strong><?php esc_html_e( 'Add', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?></strong></button>
 		</div>
 	</div>
 
-	<p id="loading-2" name="loading-2" style="display: none;" ><?php esc_html_e( 'Saving', WEBLIZAR_PINIT_TD ); ?></p>
+	<p id="loading-2" name="loading-2" style="display: none;" ><?php esc_html_e( 'Saving', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?></p>
 
 </div>
 <hr>
@@ -28,7 +33,7 @@
 		<thead class="thead-dark">
 			<tr>
 				<th scope="col">#</th>
-				<th scope="col"><?php esc_html_e( 'URL', WEBLIZAR_PINIT_TD ); ?>
+				<th scope="col"><?php esc_html_e( 'URL', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?>
 				</th>
 				<th scope="col" class="text-center"><input type="checkbox" id="select-all" name="select-all[]" value="<?php echo esc_attr('-1');?>" /></th>
 			</tr>
@@ -70,13 +75,13 @@
 		<tr>
 			<th>&nbsp;</th>
 			<th>&nbsp;</th>
-			<th class="text-center"><button type="button" id="delete-all" name="delete-all" title="Delte All" onclick="return DeleteAllImg();"><?php esc_html_e( 'Delete', WEBLIZAR_PINIT_TD ); ?></button></th>
+			<th class="text-center"><button type="button" id="delete-all" name="delete-all" title="Delte All" onclick="return DeleteAllImg();"><?php esc_html_e( 'Delete', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?></button></th>
 		</tr>
 
 	</table>
 </div>
 <?php
-wp_register_script( 'weblizar-for-exclude-images', '', array(), false, true );
+wp_register_script( 'weblizar-for-exclude-images', '', array(), '4.9', true );
 wp_enqueue_script( 'weblizar-for-exclude-images' );
 
 $js = '';
@@ -110,7 +115,7 @@ $js .= '			},';
 $js .= '			dataType: "html",';
 $js .= '			complete : function() {  },';
 $js .= '			success: function(data) {}';
-$js .= '		});';
+		$js .= '		});';
 $js .= '	}';
 $js .= ' }';
 $js .= 'function SaveNoPinImage(){';

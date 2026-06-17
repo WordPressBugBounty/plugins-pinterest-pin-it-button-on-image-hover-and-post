@@ -1,29 +1,31 @@
 <?php
-defined( 'ABSPATH' ) or die();
-wp_register_script( 'weblizar-for-exclude-page', '', array(), false, true );
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+wp_register_script( 'weblizar-for-exclude-page', '', array(), '4.9', true );
 wp_enqueue_script( 'weblizar-for-exclude-page' );
 ?>
 <hr>
 <div>
 	<h3>
-		<?php esc_html_e( 'To Exclude the page(s) from Pin Button On Image Hover. Please add page(s) name below:', WEBLIZAR_PINIT_TD ); ?>
+		<?php esc_html_e( 'To Exclude the page(s) from Pin Button On Image Hover. Please add page(s) name below:', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?>
 	</h3>
 	<br>
 	<div class="row">
 		<div class="col-md-6">
-			<input id="no-pin-image-page" name="no-pin-image-page" type="text" value="" placeholder="<?php esc_attr_e( 'Enter Page Name', WEBLIZAR_PINIT_TD ); ?>" class="form-control" />
+			<input id="no-pin-image-page" name="no-pin-image-page" type="text" value="" placeholder="<?php esc_attr_e( 'Enter Page Name', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?>" class="form-control" />
 			<p>
-				<?php esc_html_e( 'Please exclude the trailing slash eg. http://localhost/plugindev/image/', WEBLIZAR_PINIT_TD ); ?>			
-				<b><?php esc_html_e( 'Instead enter http://localhost/plugindev/image', WEBLIZAR_PINIT_TD ); ?></b>
+				<?php esc_html_e( 'Please exclude the trailing slash eg. https://example.com/plugindev/image/', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?>			
+				<b><?php esc_html_e( 'Instead enter https://example.com/plugindev/image', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?></b>
 			</p>
 		</div>
 		<div class="col-md-2">
 			<?php wp_nonce_field( 'pinit_exclude_page_nonce_action', 'pinit_exclude_page_nonce_field' ); ?>
 			<button id="add-pin-page-name" name="add-pin-page-name" class="btn btn-danger" type="button"
-			onclick="return SaveNoPinPage(this.value);"><strong><?php esc_html_e( 'Add', WEBLIZAR_PINIT_TD ); ?></strong></button>
+			onclick="return SaveNoPinPage(this.value);"><strong><?php esc_html_e( 'Add', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?></strong></button>
 		</div>
 	</div>	
-	<p id="loading-2" name="loading-2" style="display: none;" ><?php esc_html_e( 'Saving', WEBLIZAR_PINIT_TD ); ?></p>
+	<p id="loading-2" name="loading-2" style="display: none;" ><?php esc_html_e( 'Saving', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?></p>
 	
 </div>
 <?php
@@ -34,7 +36,7 @@ $all_excluded_pages = get_option( 'excluded_pint_it_pages' );
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">#</th>
-			<th scope="col"><?php esc_html_e( 'Page', WEBLIZAR_PINIT_TD ); ?>
+			<th scope="col"><?php esc_html_e( 'Page', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?>
 			</th>
 			<th scope="col" class="text-center"><input type="checkbox" id="select-page-all" name="select-page-all[]"
 					value="<?php echo esc_attr('1');?>" /></th>
@@ -68,7 +70,7 @@ $all_excluded_pages = get_option( 'excluded_pint_it_pages' );
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">#</th>
-			<th scope="col"><?php esc_html_e( 'Page', WEBLIZAR_PINIT_TD ); ?>
+			<th scope="col"><?php esc_html_e( 'Page', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?>
 			</th>
 			<th scope="col" class="text-center"><input type="checkbox" id="select-page-all" name="select-page-all[]"
 					value="<?php echo esc_attr('-1');?>" /></th>
@@ -78,7 +80,7 @@ $all_excluded_pages = get_option( 'excluded_pint_it_pages' );
 		<th>&nbsp;</th>
 		<th>&nbsp;</th>
 		<th class="text-center"><button type="button" id="delete-page-all" name="delete-page-all" title="Delte All"
-				onclick="return DeleteAll();"><?php esc_html_e( 'Delete', WEBLIZAR_PINIT_TD ); ?></button></th>
+				onclick="return DeleteAll();"><?php esc_html_e( 'Delete', 'pinterest-pin-it-button-on-image-hover-and-post' ); ?></button></th>
 	</tr>
 </table>
 
